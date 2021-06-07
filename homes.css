@@ -198,19 +198,32 @@ body{
         margin-left:2.5em;       
         border-radius:10em;
     }
+    .project-text{
+        margin-top: 5em;
+    }
 
     .project{
         font-size: 1rem;
+        margin-top: 3em;
     }
 
     .contacts{
-        margin-top:2em ;
+        margin-top:5em ;
     }
 
     .technologies{
-        margin-right: 1em;
+        margin-right:3em;
+        margin-top: 2em;
+    }
+    .tech-text{
+        padding-left:3em;
     }
 
+    .resume{
+        margin-top: 2em;
+        margin-bottom:4em;
+        ;
+    }
 }
 
 
