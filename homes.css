@@ -1,0 +1,199 @@
+:root{
+     --bg-color: hsl(0, 0%, 15%);
+}
+
+body{
+
+    font-family: "Source Sans Pro", sans-serif;
+    background: var(--bg-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name name name"
+    ". dummy ."
+    "aboutMe aboutMe resume"
+    "tech tech tech"
+    "project-text project-text project-text"
+    "projects projects projects"
+   
+    ". contacts ."
+    ;
+    color: hsl(49 37% 94%);   
+
+}
+
+.head-text{
+    grid-area: name;
+    text-align: center;
+    padding-top: 3em;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms ease forwards;
+    
+}
+
+.about-me{  
+    grid-area:aboutMe;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 200ms ease forwards;
+   
+}
+.aboutText{
+    text-align: center;
+}
+
+.resume{
+    grid-area: resume;
+    text-decoration: none;
+    color: hsl(49 37% 94%);
+    /* height: 50%; */
+    /* width: 50%; */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    
+    /*making it fade in*/
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 200ms ease forwards;
+    text-shadow: 0 0 0.05em currentColor;
+    align-self: center;
+}
+
+.download-text{
+    color: hsl(49 37% 94%);
+    border: hsl(49 37% 94%) 0.125em solid;
+    border-radius: 0.25em;
+
+}
+
+.download-text:hover {
+    background-color: hsl(49 37% 94%);
+    color: var(--bg-color);
+    
+}
+
+.technologies {
+    text-align: center;
+    grid-area:tech;
+    grid-column: 2/3;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 500ms ease forwards;
+    text-shadow: 0 0 0.05em currentColor;
+    align-self: center;
+    
+}
+
+.project-text{
+    grid-area: project-text;
+    text-align: center;
+    align-items: center;
+     /*making it fade in*/
+     opacity: 0;
+     cursor: pointer;
+     transform: translateY(3rem);
+     animation: fadeInUp 800ms 800ms ease forwards;
+     text-shadow: 0 0 0.05em currentColor;
+     align-self: center;
+}
+
+.projects{
+    grid-area: projects;    
+    align-items: center;
+    /*making it fade in*/
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 800ms ease forwards;
+    text-shadow: 0 0 0.05em currentColor;   
+}
+
+.project{ 
+    text-align: center;  
+    width: 20%;
+    border: hsl(49 37% 94%) 0.125em solid;
+    border-radius: 0.25em;
+    font-size: 2rem;     
+    grid-area: project;  
+    text-decoration: none;
+    color: hsl(49 37% 94%);  
+    /*making it fade in*/
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 800ms ease forwards;
+    text-shadow: 0 0 0.05em currentColor;
+    
+    
+}
+
+
+.project:hover{      
+    background-color: hsl(49 37% 94%) !important;
+    color: var(--bg-color) !important;
+}
+
+.repo{
+    display: none;
+    border: hsl(49 37% 94%) 0.125em solid;
+    border-radius: 0.25em;
+    font-size: 2rem;
+}
+.center-pic{
+    grid-area: dummy;
+    padding-left: 4%;
+}
+
+.dummy{
+    text-align: center;
+    height: auto;
+    grid-area: dummy;
+    grid-column: 2/3;    
+    border: color var(--bg-color) 0.125em solid;
+    border-radius:9em;
+
+
+    /*making it fade in*/
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 1.5s ease forwards;
+    text-shadow: 0 0 0.05em currentColor;
+}
+
+.contacts{
+    grid-area: contacts;
+    text-align: center;
+    grid-column: 2/3;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(3rem);
+    animation: fadeInUp 800ms 1.1s ease forwards;
+    text-shadow: 0 0 0.05em currentColor;
+    align-self: center;
+}
+
+.contact{
+    padding: 2.5%;
+}
+
+.morningTText {
+    color: var(--bg-color);
+    text-decoration: none;
+    display: none;
+}
+
+
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
