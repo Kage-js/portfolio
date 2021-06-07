@@ -188,6 +188,31 @@ body{
     display: none;
 }
 
+@media only screen and (max-width: 520px){
+    body{
+        display: inline;
+        
+    }
+
+    .dummy{
+        margin-left:2.5em;       
+        border-radius:10em;
+    }
+
+    .project{
+        font-size: 1rem;
+    }
+
+    .contacts{
+        margin-top:2em ;
+    }
+
+    .technologies{
+        margin-right: 1em;
+    }
+
+}
+
 
 
 
