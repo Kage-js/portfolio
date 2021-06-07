@@ -60,7 +60,7 @@ body{
     transform: translateY(3rem);
     animation: fadeInUp 800ms 200ms ease forwards;
     text-shadow: 0 0 0.05em currentColor;
-    align-self: center;
+    padding-top: 1em;
 }
 
 .download-text{
