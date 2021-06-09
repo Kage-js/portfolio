@@ -17,7 +17,7 @@ body{
     "tech tech tech"
     "project-text project-text project-text"
     "projects projects projects"
-   
+    "project project project"
     ". contacts ."
     ;
     color: hsl(49 37% 94%);   
@@ -108,36 +108,41 @@ body{
     align-items: center;
     /*making it fade in*/
     opacity: 0;
+    display: flex;
+    padding: auto;
     cursor: pointer;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 800ms ease forwards;
     text-shadow: 0 0 0.05em currentColor;   
 }
 
-.project{ 
-    text-align: center;  
+
+
+.project{    
+    text-align: center;
     width: 20%;
     border: hsl(49 37% 94%) 0.125em solid;
     border-radius: 0.25em;
-    font-size: 2rem;     
-    grid-area: project;  
+    font-size: 2rem;
+    grid-area: project;
+    margin: 1em;
     text-decoration: none;
-    color: hsl(49 37% 94%);  
+    color: hsl(49 37% 94%);
     /*making it fade in*/
     opacity: 0;
     cursor: pointer;
     transform: translateY(3rem);
-    animation: fadeInUp 800ms 800ms ease forwards;
+    animation: fadeInUp 800ms 900ms ease forwards;
     text-shadow: 0 0 0.05em currentColor;
-    
-    
 }
+
 
 
 .project:hover{      
     background-color: hsl(49 37% 94%) !important;
     color: var(--bg-color) !important;
 }
+
 
 .repo{
     display: none;
@@ -187,6 +192,12 @@ body{
     color: var(--bg-color);
     text-decoration: none;
     display: none;
+}
+
+.toDoText{
+    color: var(--bg-color);
+    text-decoration: none;
+    display: none;   
 }
 
 @media only screen and (max-width: 520px){
