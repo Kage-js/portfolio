@@ -12,7 +12,8 @@ body{
     grid-template-areas: 
     "name name name"
     ". dummy ."
-    "aboutMe aboutMe resume"
+    "aboutMe aboutMe aboutMe"
+    ". resume ."
     "tech tech tech"
     "project-text project-text project-text"
     "projects projects projects"
