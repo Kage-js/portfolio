@@ -6,9 +6,23 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">   
         <title>Eric Francis</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello, my name is Eric. :)</h1>          
-        <a href="./home.html" class="subtitle">Click to Enter</>
-    </body>
+        
+        
+        <h1 class = "header">Hello, my name is Eric. :)</h1>  
+        <div class="sauce">
+            <p class="webDev" onclick="animationStart()">Web Developer </p>          
+                <p class="music" onclick="animationStart()">Music Producer </p>
+            <p class="somethingElse" onclick="animationStart()" > Something else...</P>        
+        </div>
+        <div class="enter-btn">
+            <img src="assets\FF7Cursor.png" class="pointer">
+             <a  onclick="animationStart()" id="enter-btn" class="subtitle">Enter? </a>
+        </div>
+            <!-- adding falling effect-->
+<script src="./index.js"></script>
+</body>
 </html>

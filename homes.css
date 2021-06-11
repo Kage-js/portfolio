@@ -1,5 +1,5 @@
 :root{
-     --bg-color: hsl(0, 0%, 15%);
+     --bg-color: hsl(0, 0%, 0%);
 }
 
 body{
@@ -12,7 +12,7 @@ body{
     grid-template-areas: 
     "name name name"
     ". dummy ."
-    "aboutMe aboutMe aboutMe"
+    "about-intro . aboutMe"
     ". resume ."
     "tech tech tech"
     "project-text project-text project-text"
@@ -20,7 +20,7 @@ body{
     "project project project"
     ". contacts ."
     ;
-    color: hsl(49 37% 94%);   
+    color: hsl(0, 0%, 100%);   
 
 }
 
@@ -35,14 +35,22 @@ body{
 }
 
 .about-me{  
+    
     grid-area:aboutMe;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 200ms ease forwards;
+    align-self: center;
    
 }
 .aboutText{
     text-align: center;
+}
+
+.about-intro {
+    grid-area: about-intro;
+    align-self: center;
+    font-size: 3rem;
 }
 
 .resume{
