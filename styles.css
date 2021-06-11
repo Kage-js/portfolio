@@ -84,23 +84,21 @@ h1::after{
     color: red;
     transition: all 1s;
     align-items: center;
-    animation:slide 2s, Evil 4s +2s forwards;
+    animation:slide 2s ease, Evil 3s +2s forwards;
 }
 
 .fadeUp{
     align-items: center;
-    
     margin-right:1em;
     font-size: 2em;
-    color: white;
-    
+    color: white;  
     cursor: pointer;
     text-shadow: 0 0 0.05em currentColor;  
     animation: fadeInUpAfter 1000ms linear forwards;
-    
 }
 .pointer{  
     background: url("../assets/FF7Cursor.png");
+    margin-right: 1em;
     transform: translateY(3rem);
     animation: fadeInUp 2.2s ease calc(var(--typewriterSpeed) + 2s)forwards;
     cursor: pointer;
@@ -112,6 +110,10 @@ h1::after{
     animation-timing-function: ease-in-out;
     margin-left: 30px;
     margin-top: 5px;
+}
+
+.pointer:active{
+   display: none;
 }
 
 
@@ -137,6 +139,47 @@ h1::after{
     cursor: pointer;
 }
 
+
+
+.beforeSpawn{
+    opacity: 0;
+}
+
+
+.battle{
+    
+}
+
+.intro-demon{
+    color: white;
+}
+.demon{
+    grid-area: demon;
+    justify-self: center;
+    opacity: 0;  
+    height: 50em;
+    width: 50em;
+    animation: demonSpawn 3s ease forwards;
+}
+
+@keyframes demonSpawn {
+    0%{
+        opacity: 0;
+    }
+
+    33%{
+        opacity:0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
 @keyframes slide {
   to {
       margin-left:-6em;
@@ -162,14 +205,17 @@ h1::after{
 /*animations */
 @keyframes floating {
     0% {
+       
         transform: translate(0, 0px);
     }
 
     50% {
+        
         transform: translate(0, 15px);
     }
     
     100% {
+        
         transform: translate(0, -0px);
     }
 }
