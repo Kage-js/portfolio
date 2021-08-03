@@ -30,10 +30,10 @@ function animationStart(){
     enter.className="fadeUp" 
     pointer.className="fadeUp" 
     setTimeout(function() {
-        beforeSpawn.className="demon"
-        
+        window.location.assign("newHome.html")
+           
     }, 4000)
     setTimeout(function() {
-        demonIntro.style.display="inline"    
-    }, 5000)
+        
+    }, 4000)
 }

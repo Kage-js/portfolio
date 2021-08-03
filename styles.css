@@ -150,8 +150,12 @@ h1::after{
     
 }
 
-.intro-demon{
+.intro-demon{  
+    grid-area: intro-text; 
+    
+    grid-column: 3;
     color: white;
+    font-size: 2rem;
 }
 .demon{
     grid-area: demon;
@@ -159,7 +163,7 @@ h1::after{
     opacity: 0;  
     height: 50em;
     width: 50em;
-    animation: demonSpawn 3s ease forwards;
+    animation: demonSpawn 2s ease forwards;
 }
 
 @keyframes demonSpawn {
