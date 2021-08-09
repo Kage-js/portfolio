@@ -30,7 +30,7 @@ function animationStart(){
     enter.className="fadeUp" 
     pointer.className="fadeUp" 
     setTimeout(function() {
-        window.location.assign("newHome.html")
+        window.location.assign("Home.html")
            
     }, 4000)
     setTimeout(function() {
