@@ -1,13 +1,21 @@
 :root{
+<<<<<<< HEAD
      --bg-color: #080708;
 }
 
 body{
 
+=======
+     --bg-color: hsl(0, 0%, 0%);
+}
+
+body{
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
     font-family: "Source Sans Pro", sans-serif;
     background: var(--bg-color);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+<<<<<<< HEAD
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "name name name"
@@ -21,6 +29,22 @@ body{
     ;
     color: #E6E8E6;   
     
+=======
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name name name"
+    ". dummy ."
+    "about-intro . aboutMe"
+    ". resume ."
+    "tech tech tech"
+    "project-text project-text project-text"
+    "projects projects projects"
+    "project project project"
+    ". contacts ."
+    ;
+    color: hsl(0, 0%, 100%);   
+
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
 }
 
 .head-text{
@@ -34,17 +58,36 @@ body{
 }
 
 .about-me{  
+<<<<<<< HEAD
+=======
+    
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
     grid-area:aboutMe;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 200ms ease forwards;
+<<<<<<< HEAD
    
 }
 
+=======
+    align-self: center;
+   
+}
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
 .aboutText{
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.about-intro {
+    grid-area: about-intro;
+    align-self: center;
+    font-size: 3rem;
+}
+
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
 .resume{
     grid-area: resume;
     text-decoration: none;
@@ -80,7 +123,11 @@ body{
 .technologies {
     text-align: center;
     grid-area:tech;
+<<<<<<< HEAD
     grid-column: 1fr;
+=======
+    grid-column: 2/3;
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
     opacity: 0;
     cursor: pointer;
     transform: translateY(3rem);
@@ -106,6 +153,7 @@ body{
 .projects{
     grid-area: projects;    
     align-items: center;
+<<<<<<< HEAD
     display:grid;
 
     grid-template-areas:
@@ -115,12 +163,19 @@ body{
     ;
     /*making it fade in*/
     opacity: 0;
+=======
+    /*making it fade in*/
+    opacity: 0;
+    display: flex;
+    padding: auto;
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
     cursor: pointer;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 800ms ease forwards;
     text-shadow: 0 0 0.05em currentColor;   
 }
 
+<<<<<<< HEAD
 .project{ 
     margin: auto;
     width: 75%;
@@ -131,10 +186,25 @@ body{
     grid-area: project;  
     text-decoration: none;
     color: hsl(49 37% 94%);  
+=======
+
+
+.project{    
+    text-align: center;
+    width: 20%;
+    border: hsl(49 37% 94%) 0.125em solid;
+    border-radius: 0.25em;
+    font-size: 2rem;
+    grid-area: project;
+    margin: 1em;
+    text-decoration: none;
+    color: hsl(49 37% 94%);
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
     /*making it fade in*/
     opacity: 0;
     cursor: pointer;
     transform: translateY(3rem);
+<<<<<<< HEAD
     animation: fadeInUp 800ms 800ms ease forwards;
     text-shadow: 0 0 0.05em currentColor;
     
@@ -170,6 +240,12 @@ body{
     grid-area: mfpygame;
     align-items: center;
 }
+=======
+    animation: fadeInUp 800ms 900ms ease forwards;
+    text-shadow: 0 0 0.05em currentColor;
+}
+
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
 
 
 .project:hover{      
@@ -178,6 +254,15 @@ body{
 }
 
 
+<<<<<<< HEAD
+=======
+.repo{
+    display: none;
+    border: hsl(49 37% 94%) 0.125em solid;
+    border-radius: 0.25em;
+    font-size: 2rem;
+}
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
 .center-pic{
     grid-area: dummy;
     padding-left: 4%;
@@ -213,16 +298,73 @@ body{
 }
 
 .contact{
+<<<<<<< HEAD
     justify-self:end;
     padding: 2.5%;
 }
 
 .projectText {
+=======
+    padding: 2.5%;
+}
+
+.morningTText {
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
     color: var(--bg-color);
     text-decoration: none;
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+.toDoText{
+    color: var(--bg-color);
+    text-decoration: none;
+    display: none;   
+}
+
+@media only screen and (max-width: 520px){
+    body{
+        display: inline;
+        
+    }
+
+    .dummy{
+        margin-left:2.5em;       
+        border-radius:10em;
+    }
+    .project-text{
+        margin-top: 5em;
+    }
+
+    .project{
+        font-size: 1rem;
+        margin-top: 3em;
+    }
+
+    .contacts{
+        margin-top:5em ;
+    }
+
+    .technologies{
+        margin-right:3em;
+        margin-top: 2em;
+    }
+    .tech-text{
+        padding-left:3em;
+    }
+
+    .resume{
+        margin-top: 2em;
+        margin-bottom:4em;
+        ;
+    }
+}
+
+
+
+
+>>>>>>> c6c036cf140fefcdec0fd29d148bfbd0f2837e84
 @keyframes fadeInUp {
     to {
         opacity: 1;
