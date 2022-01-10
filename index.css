@@ -110,7 +110,7 @@ body{
 
     grid-template-areas:
     "morningT angularTask fgc"
-    "mfpygame . ."
+    "mfpygame chatbot ."
     ". . ."
     ;
     /*making it fade in*/
@@ -171,6 +171,12 @@ body{
     align-items: center;
 }
 
+.project.chatbot{
+     text-align: center;
+    justify-content: center;
+    grid-area: chatbot;
+    align-items: center;
+}
 
 .project:hover{      
     background-color: hsl(49 37% 94%) !important;
