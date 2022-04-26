@@ -36,6 +36,7 @@ body{
 .about-me{  
     grid-area:aboutMe;
     opacity: 0;
+    text-align: center;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 200ms ease forwards;
    
