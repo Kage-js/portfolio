@@ -6,12 +6,15 @@ body{
 
     font-family: "Source Sans Pro", sans-serif;
     background: var(--bg-color);
+    background-image: url('assets/BostonBackground.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 3fr 3fr 2fr 2fr 2fr 2fr 2fr;
     grid-template-areas: 
-    "name name name"
-    ". dummy ."
+    "hero hero hero"
     "aboutMe aboutMe aboutMe"
     ". resume . "
     "project-text project-text project-text"
@@ -23,20 +26,22 @@ body{
     
 }
 
-.head-text{
-    grid-area: name;
+
+.hero{
+    grid-area: hero;
     text-align: center;
-    padding-top: 3em;
+    justify-content: center;
+    padding-top: 25em;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms ease forwards;
     
 }
 
-.about-me{  
+.about-me{   
     grid-area:aboutMe;
+    text-align: center;
     opacity: 0;
-     text-align: center;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 200ms ease forwards;
    
