@@ -8,22 +8,12 @@
   </head>
     <body>
       <link rel="stylesheet" href="index.css" />
-      <h1 class="head-text">Eric Francis</h1>
-      <picture class="dummy">
-        <img class="dummy" src="assets\headshot.jpg" />
-      </picture>
+      <div class="hero">  
+        <h1 class="head-text">Eric Francis</h1>
+      </div>
 
       <div class="about-me">
-        <h2 class="aboutText">About me</h2>
-        <p>
-          A Boston based Web Developer who is always looking for new
-          opportunities to learn and grow. Attending Launch Academy taught me
-          how to build complex fullstack web applications using technologies
-          like React, Rails, and MySQL. Currently I'm working towards my
-          Computer Science Degree to learn more about the magic of programming.
-          I will be updating this website regularly and adding more projects
-          soon so stay tuned!
-        </p>
+        <h4 class="aboutText">Full Stack Developer, Music Producer, ...Something else</h4>
       </div>
 
       <div class="resume">
@@ -33,147 +23,70 @@
           target="_blank"
           download
         >
-          <p class="download-text">Download My Resume!</p>
+          <p class="download-text">Resume</p>
         </a>
       </div>
+      <div class="skillcarosel" style="overflow-x: hidden;">
+        <h2 class="skill-text">Skills</h2>
+        <div class="skillWrapper">
+          <div class="skillLoop">
+            <div class="skills">
+              <img class="skillImg" src="assets\512px-HTML5_logo_and_wordmark.svg.png" />
+              <img class="skillImg" src="assets\120px-CSS3_logo_and_wordmark.svg.png" />
+              <img class="skillImg" src="assets\kisspng-javascript-computer-icons-scalable-vector-graphics-list-of-javascript-enhancements-fandom-developers-5d145895da3992.0726245815616144858939.png" />
+              <img class="skillImg" src="assets\kisspng-java-servlet-java-database-connectivity-joget-work-5d4bbefb1f9045.7872484615652451791293.png" />
+              <img class="skillImg" src="assets\Ruby_On_Rails_Logo.svg.png" />
+              <img class="skillImg" src="assets\React-icon.svg.png" />
+              <img class="skillImg" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" />
 
+              <img class="skillImg" src="assets\512px-HTML5_logo_and_wordmark.svg.png" />
+              <img class="skillImg" src="assets\120px-CSS3_logo_and_wordmark.svg.png" />
+              <img class="skillImg" src="assets\kisspng-javascript-computer-icons-scalable-vector-graphics-list-of-javascript-enhancements-fandom-developers-5d145895da3992.0726245815616144858939.png" />
+              <img class="skillImg" src="assets\kisspng-java-servlet-java-database-connectivity-joget-work-5d4bbefb1f9045.7872484615652451791293.png" />
+              <img class="skillImg" src="assets\Ruby_On_Rails_Logo.svg.png" />
+              <img class="skillImg" src="assets\React-icon.svg.png" />
+              <img class="skillImg" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" />
+            </div>      
+        </div>
+      </div>
+    </div>
+      
       <div class="project-text">
-        <h2>These are all my projects...for now</h2>
+        <h2>Projects</h2>
       </div>
-
+      
       <div class="projects">
-        <div class="project morningT" id="morningT" onclick="openMorningT()">
-          The Morning T
-          <span id="morningTText" class="morningTText" style="display: none">
-            <p>
-              Description: <br />
-              A web application that allows users to see where all the Trains
-              stop in Boston. <br />
-              <br />
-              Technologies used: <br />
-              React,Ruby on Rails,SQL,Heroku,AWS
+        <div class="morningT">
+          <img class="morningTpreview" src="assets\morningTSnapShot.png"/>
+          <div class="morningTOverlay">
+            <div class="morningTTitle" onclick="openMorningT()">The Morning T</div>
+            <p class="morningTDiscription">
+              This is morning T stuff 
             </p>
-            <a
-              href="https://themorningt.herokuapp.com/"
-              target="_blank"
-              style="text-decoration: none; color: var(--bg-color)"
-            >
-              <strong> Check Out the Project! </strong>
-            </a>
-          </span>
+            <span id="morningTText" class="morningTText" style="display: none">
+              <p>
+                Description: <br />
+                A web application that allows users to see where all the Trains
+                stop in Boston. <br />
+                <br />
+                Technologies used: <br />
+                React,Ruby on Rails,SQL,Heroku,AWS
+              </p>
+              <a
+                href="https://themorningt.herokuapp.com/"
+                target="_blank"
+                style="text-decoration: none; color: var(--bg-color)"
+              >
+                <strong> Check Out the Project! </strong>
+              </a>
+            </span>
+          </div>
         </div>
+        </div>  
 
-        <div
-          class="project angularTask"
-          id="project angularTask"
-          onclick="openAngularTask()"
-        >
-          Angular Task app
-          <span
-            id="angulartaskText"
-            class="angulartaskText"
-            style="display: none"
-          >
-            <p>
-              Description: <br />
-
-              A simple task manager <br />
-              <br />
-              Technologies used: <br />
-
-              HTML, CSS, Javascript, Angular
-            </p>
-            <a
-              href="https://github.com/ericfrancis313/Angular-Task-Manager"
-              target="_blank"
-              style="text-decoration: none; color: var(--bg-color)"
-            >
-              <strong> Check Out the Repository! </strong>
-            </a>
-          </span>
-        </div>
-
-        <div class="project fgc" id="project fgc" onclick="openFgc()">
-          FGC Dictionary
-          <span id="fgcText" class="fgcText" style="display: none">
-            <p>
-              Description: <br />
-              Fighting game dictionary / vocabulary tester Implemented React in
-              a Rails app to test users on vocabulary <br />
-              Built custom API using active-record and retrieving data using
-              Nokogiri<br />
-              <br />
-              Technologies used: <br />
-              React,Ruby on Rails,SQL,Heroku,AWS
-            </p>
-            <a
-              href="https://themorningt.herokuapp.com/"
-              target="_blank"
-              style="text-decoration: none; color: var(--bg-color)"
-            >
-              <strong> Check Out the Repository! </strong>
-            </a>
-          </span>
-        </div>
-
-        <div
-          class="project mfPyGame"
-          id="project mfPyGame"
-          onclick="openmfPyGame()"
-        >
-          My First Pygame
-          <span id="mfPyGameText" class="mfPyGameText" style="display: none">
-            <p>
-              Description: <br />
-              My first Pygame using a tutorial. <br />
-              Players can jump over moving targets. <br />
-              If players collide with enemies the game loop ends.<br />
-              <br />
-              Technologies used: <br />
-              Pygame
-            </p>
-            <a
-              href="https://github.com/ericfrancis313/MyFirstPygame"
-              target="_blank"
-              style="text-decoration: none; color: var(--bg-color)"
-            >
-              <strong> Check Out the Repository! </strong>
-            </a>
-          </span>
-        </div>
-      
-      <div
-          class="project chatbot"
-          id="project chatbot"
-          onclick="openChatBot()"
-        >
-          Twitch Chat Bot
-          <span id="chatbotText" class="chatbotText" style="display: none">
-            <p>
-              Description: <br />
-              A Twitch Chat bot that can interact with the Twitch Streamers Audience <br />
-              
-              <br />
-              Technologies used: <br />
-              Javascript
-            </p>
-            <a
-              href="https://github.com/ericfrancis313/Colbot/blob/main/Colbot/index.js"
-              target="_blank"
-              style="text-decoration: none; color: var(--bg-color)"
-            >
-              <strong> Check Out the Repository! </strong>
-            </a>
-          </span>
-        </div>
+        
       </div>
-      
-      </div>
-
-      
-
-      
-
+    
       <div class="contacts">
         <a
           class="contact"
@@ -184,23 +97,27 @@
           href="https://github.com/ericfrancis313" padding="3" alt="" style:
           height = "40" width = "40" padding="3" >
         </a>
+
         <a class="contact" href="https://twitter.com/code_kage">
           <img
           src="https://github.com/ericfrancis313/personal_website-/blob/master/app/assets/images/twitter.com.png?raw=true"
           href="https://github.com/ericfrancis313" style: height = "40" width =
           "40" padding="3" style= "text-decoration: none;">
         </a>
+
         <a class="contact" href="https://www.instagram.com/codekage/">
           <img
           src="https://github.com/ericfrancis313/personal_website-/blob/master/app/assets/images/instagram.png?raw=true"
           href="https://github.com/ericfrancis313" style: height = "40" width =
           "40" padding="3" style= "text-decoration: none;">
         </a>
+
         <a class="contact" href="https://www.linkedin.com/in/ericfrancis313/">
           <img
           src="https://github.com/ericfrancis313/personal_website-/blob/master/app/assets/images/linkedin.com.png?raw=true"
           style: height = "40" width = "40" padding="3" >
         </a>
+
         <a class="contact" href="https://github.com/ericfrancis313">
           <img
           src="https://github.com/ericfrancis313/personal_website-/blob/master/app/assets/images/github.com.png?raw=true"

@@ -6,35 +6,41 @@ body{
 
     font-family: "Source Sans Pro", sans-serif;
     background: var(--bg-color);
+    background-image: url('assets/BostonBackground.jpeg');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    "name name name"
-    ". dummy ."
+    "hero  hero hero"
     "aboutMe aboutMe aboutMe"
-    ". resume . "
-    "project-text project-text project-text"
-    "projects projects projects"
-    "tech tech tech"
-    ". contacts ."
+    ". resume ."
+    ".skillTxt ."
+    ". skills . "
+    ". project-text ."
+    ". projects ."
+    ". contacts . "
     ;
     color: #E6E8E6;   
     
 }
 
-.head-text{
-    grid-area: name;
+.hero{
+    grid-area: hero;
     text-align: center;
-    padding-top: 3em;
+    justify-content: center;
+    padding-top: 25em;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms ease forwards;
     
 }
 
-.about-me{  
+.about-me{   
     grid-area:aboutMe;
+    text-align: center;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 200ms ease forwards;
@@ -49,8 +55,6 @@ body{
     grid-area: resume;
     text-decoration: none;
     color: hsl(49 37% 94%);
-    /* height: 50%; */
-    /* width: 50%; */
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
@@ -66,8 +70,7 @@ body{
 
 .download-text{
     color: hsl(49 37% 94%);
-    border: hsl(49 37% 94%) 0.125em solid;
-    border-radius: 0.25em;
+   
 
 }
 
@@ -77,19 +80,56 @@ body{
     
 }
 
-.technologies {
+.skill-text{
+    grid-area: skillTxt;
     text-align: center;
-    grid-area:tech;
-    grid-column: 1fr;
-    opacity: 0;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillImg{
+    height: 200px;
+    width: 100%;
+    display: flex;
+}
+.skillLoop {
+    display: flex;
+    padding: 200px ;
+    top: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 500ms ease forwards;
     text-shadow: 0 0 0.05em currentColor;
     align-self: center;
-    
+}
+.skillcarosel{
+    grid-area:skills;
+
 }
 
+.skillWrapper{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.skills{
+    justify-items: center;
+    position: absolute;
+    display: flex;
+    animation: scroll 10s linear infinite;
+    transform: translate(0, -50%);
+    top: 50%;
+    
+}
+.skills:nth-child(1) {
+    float:left;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0
+}
+.skills:nth-child(2) {
+   top: 0;
+}
 .project-text{
     grid-area: project-text;
     text-align: center;
@@ -106,13 +146,7 @@ body{
 .projects{
     grid-area: projects;    
     align-items: center;
-    display:grid;
-
-    grid-template-areas:
-    "morningT angularTask fgc"
-    "mfpygame chatbot ."
-    ". . ."
-    ;
+    justify-content: center;
     /*making it fade in*/
     opacity: 0;
     cursor: pointer;
@@ -122,67 +156,84 @@ body{
 }
 
 .project{ 
-    margin: auto;
-    width: 75%;
-    justify-content: center;
-    border: hsl(49 37% 94%) 0.125em solid;
-    border-radius: 0.25em;
-    font-size: 2rem;     
-    grid-area: project;  
-    text-decoration: none;
-    color: hsl(49 37% 94%);  
     /*making it fade in*/
     opacity: 0;
     cursor: pointer;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 800ms ease forwards;
-    text-shadow: 0 0 0.05em currentColor;
+    text-shadow: 0 0 0.05em currentColor;   
+}
+
+.project.morningT{  
+  position: relative; 
+  width:10%;
+}
+
+
+.morningTpreview{
+
+    display: block;
+    margin: 0 auto;
+  display:block;
+  width:250px;
+  height: 250px; 
+}
+
+.morningT.morningTOverlay{
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+}
+
+.morningTOverlay{
     
-    
-}
-
-.project.morningT{
-    
-    text-align: center;
-    justify-content: center;
-    grid-area: morningT;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
+    width: 250px;
+    height: 250px;
+    background: rgb(0,0,0,0.6);
+    color: #ffff;
+    font-family:"Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
 }
 
-.project.angularTask{
-    text-align: center;
-    justify-content: center;
-    grid-area: angularTask;
-    align-items: center;
+.morningTOverlay:hover{
+    opacity: 1;
 }
 
-.project.fgc{
-    text-align: center;
-    justify-content: center;
-    grid-area: fgc;
-    align-items: center;
+.morningTTitle{
+    font-size: 2em;
+    font-weight: bold;   
 }
 
-.project.mfPyGame{
-    text-align: center;
-    justify-content: center;
-    grid-area: mfpygame;
-    align-items: center;
+.morningTDescription{
+    font-size: 1.25em;
+    margin-top: 0.25em;
 }
 
-.project.chatbot{
-     text-align: center;
-    justify-content: center;
-    grid-area: chatbot;
-    align-items: center;
+.morningTOverlay >*{
+    transform:translateY(20px);
+    transition: transform 0.25s;
 }
 
-.project:hover{      
-    background-color: hsl(49 37% 94%) !important;
-    color: var(--bg-color) !important;
+.morningTOverlay:hover > *{
+    transform: translateY(0px) ;
 }
 
+.mornintTText{
+
+}
 
 .center-pic{
     grid-area: dummy;
@@ -209,6 +260,7 @@ body{
 .contacts{
     grid-area: contacts;
     text-align: center;
+    padding-top: 20em;
     grid-column: 2/3;
     opacity: 0;
     cursor: pointer;
@@ -234,4 +286,12 @@ body{
         opacity: 1;
         transform: translateY(0);
     }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1770px);
+  }
 }
