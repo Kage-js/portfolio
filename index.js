@@ -7,6 +7,7 @@ window.onscroll = function() {
      
   document.body.style.background =  "linear-gradient(rgba(0, 0, 0, " + opac*.2 + "), rgba(0, 0, 0, " + opac*.2 + ")), url('assets/BostonBackground.jpeg') no-repeat";
   document.body.style.backgroundPosition="center"; 
+  document.body.style.backgroundAttachment='fixed';
   document.body.style.backgroundSize= "cover";
   console.log(document.body.background)
   }
@@ -15,13 +16,15 @@ window.onscroll = function() {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
+
 function openMorningT(){
-var text= document.getElementById("morningTText") 
+    console.log("this was clicked")
+    var text= document.getElementById("morningTText") 
     var project=document.getElementById("morningT")
     
     if (text.style.display=="none"){
         text.style.display ="inline"
-        project.style.backgroundSize="cover"
+        document.body.style.background="cover"
         project.style.alignSelf = "center"
         project.style.backgroundColor = "#ffff"
         project.style.color ="var(--bg-color)"

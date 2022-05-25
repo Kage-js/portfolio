@@ -3,21 +3,24 @@
 }
 
 body{
-
-    font-family: "Source Sans Pro", sans-serif;
+    max-width: 100%;
+    font-family: 'Roboto Mono', monospace;
     background: var(--bg-color);
     background-image: url('assets/BostonBackground.jpeg');
     background-size: cover;
+    background-attachment: fixed;
     background-position:center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
     "hero  hero hero"
-    "aboutMe aboutMe aboutMe"
+    "discription discription discription"
     ". resume ."
-    ".skillTxt ."
+    ". aboutMe ."
+    ". skillTxt ."
     ". skills . "
     ". project-text ."
     ". projects ."
@@ -38,8 +41,17 @@ body{
     
 }
 
-.about-me{   
-    grid-area:aboutMe;
+.aboutMe{
+    grid-area: aboutMe;
+    padding-top: 100px;
+    text-align: center;
+    justify-content: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.discription{   
+    grid-area:discription;
     text-align: center;
     opacity: 0;
     transform: translateY(3rem);
@@ -50,6 +62,38 @@ body{
 .aboutText{
     text-align: center;
 }
+
+.fullStackDev{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+ .fullStackDev:hover{
+    transform: scale(1.5);
+   
+    padding-right: 150px;
+}
+
+.musicProducer{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.musicProducer:hover{
+    transform: scale(1.5);
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.somethingElse{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.somethingElse:hover{
+    transform: scale(1.5);
+    padding-left: 150px;
+   
+}
+
 
 .resume{
     grid-area: resume;
@@ -103,6 +147,7 @@ body{
 }
 .skillcarosel{
     grid-area:skills;
+    padding-top: 500px;
 
 }
 
@@ -231,8 +276,9 @@ body{
     transform: translateY(0px) ;
 }
 
-.mornintTText{
-
+.morningT{
+ text-align: center;
+ 
 }
 
 .center-pic{
@@ -280,6 +326,7 @@ body{
     text-decoration: none;
     display: none;
 }
+
 
 @keyframes fadeInUp {
     to {
