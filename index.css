@@ -4,6 +4,7 @@
 
 body{
     max-width: 100%;
+    width: 100vw;
     font-family: 'Roboto Mono', monospace;
     background: var(--bg-color);
     background-image: url('assets/BostonBackground.jpeg');
