@@ -3,6 +3,7 @@
 }
 
 body{
+    scroll-snap-type: y mandatory;
     max-width: 100%;
     width: 100vw;
     font-family: 'Roboto Mono', monospace;
@@ -17,8 +18,8 @@ body{
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-    "hero  hero hero"
-    "discription discription discription"
+    "hero hero hero"
+    ". . ."
     ". resume ."
     ". aboutMe ."
     ". skillTxt ."
@@ -42,7 +43,7 @@ body{
     
 }
 
-.aboutMe{
+.aboutMe{  
     grid-area: aboutMe;
     padding-top: 100px;
     text-align: center;
@@ -67,37 +68,45 @@ body{
 .fullStackDev{
     padding-left: 50px;
     padding-right: 50px;
+    transition: all .2s ease-in-out;
 }
 
  .fullStackDev:hover{
     transform: scale(1.5);
-   
+   padding-bottom: 150px;
     padding-right: 150px;
 }
 
 .musicProducer{
     padding-left: 50px;
     padding-right: 50px;
+  
+    transition: all .2s ease-in-out;
 }
 .musicProducer:hover{
     transform: scale(1.5);
     padding-left: 150px;
     padding-right: 150px;
+    padding-bottom: 150px;
+    
 }
 
 .somethingElse{
     padding-left: 50px;
     padding-right: 50px;
+    transition: all .2s ease-in-out;
 }
 .somethingElse:hover{
     transform: scale(1.5);
     padding-left: 150px;
+    padding-bottom: 150px;
    
 }
 
 
 .resume{
     grid-area: resume;
+    cursor: default;
     text-decoration: none;
     color: hsl(49 37% 94%);
     text-align: center;
@@ -190,6 +199,8 @@ body{
 }
 
 .projects{
+     height: 100vh;
+      cursor: default;
     grid-area: projects;    
     align-items: center;
     justify-content: center;
@@ -203,6 +214,7 @@ body{
 
 .project{ 
     /*making it fade in*/
+     cursor: default;
     opacity: 0;
     cursor: pointer;
     transform: translateY(3rem);
@@ -211,6 +223,7 @@ body{
 }
 
 .project.morningT{  
+    cursor: default;
   position: relative; 
   width:10%;
 }
@@ -278,6 +291,7 @@ body{
 }
 
 .morningT{
+     cursor: default;
  text-align: center;
  
 }
