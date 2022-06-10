@@ -1,5 +1,7 @@
-
 var background = document.querySelector("p").offsetTop;
+var musicProducer = document.getElementsByClassName("musicProducer")
+var fullStackDev = document.getElementsByClassName("fullStackDev")
+
 window.onscroll = function() {
   if (window.pageYOffset > 0) {
  var opac = (window.pageYOffset / background);
@@ -16,6 +18,8 @@ window.onscroll = function() {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
+
+
 
 function openMorningT(){
     console.log("this was clicked")
@@ -56,6 +60,7 @@ function openAngularTask(){
         
     }
 }
+
 
 function openFgc(){
     var text= document.getElementById("fgcText") 
@@ -110,3 +115,7 @@ function openChatBot(){
     }
 }
 
+function musicProducerHover(){
+        
+
+}

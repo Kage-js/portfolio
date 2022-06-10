@@ -20,16 +20,14 @@
         <div class="fullStackDev">
           <i class="fa-solid fa-keyboard"></i>
           <h4>Full Stack Developer</h4>
-          <h5>       
-            Making music has been an outlet for me since the 6th grade.
-            My experince with music production has given me the ability to work freelance
-            making music and sounds for other content creators. Being a freelance producer has taught me
-            to be <b>time efficient</b> to bring clients their product in a timeley manner, and <b>self sufficient</b>
-            when problems arised.
+          <h5>
+            As someone who uses technology constantly I was always interested in how it all works.
+            I began my jorney self taught learning the basics of HTML, CSS and JavaScript, then graduated from Launch academy where I learned more about front end and backend frameworks.
+            After the 2020 pandemic I decided to pursue a degree in computer science. 
          </h5>
         </div>
-        <div style=" border-left: 2px solid #ffff; top:1em;"></div>
-        <div class="musicProducer">
+        
+        <div class="musicProducer" onmouseover="musicProducerHover()">
           <i class="fa-solid fa-music"></i>
           <h4>Music Producer</h4>
           <h5>
@@ -38,37 +36,33 @@
             making music and sounds for other content creators. Being a freelance producer has taught me
             to be <b>time efficient</b> to bring clients <b>quality</b> products in a timeley manner, and <b>self sufficient</b>
             when problems arised.  
-            
-          
           </h5>
         </div>
-        <div style="border-left: 2px solid #ffff;"></div>
+        
         <div class="somethingElse">
           <i class="fa-regular fa-star"></i>
           <h4>Something Else</h4>
           <h5>
-            Making music has been an outlet for me since the 6th grade.
-            My experince with music production has given me the ability to work freelance
-            making music and sounds for other content creators. Being a freelance producer has taught me
-            to be <b>time efficient</b> to bring clients their product in a timeley manner, and <b>self sufficient</b>
-            when problems arised.
+            Being <b>self motivated</b> and <b>eager to learn</b> helps fuel curiosity and 
+            overactive imagination. I tend to find myself learning new skills so that I can create 
+            and finding new things to create.
           </h5>
         </div>
-        
-
       </div>
 
       <div class="resume">
         <a
           href="assets\Eric_Francis_Resume.pdf"
-          style="text-decoration: none"
+          style="
+          text-decoration: none;
+          "
           target="_blank"
           download
         >
           <p class="download-text">Click to download Resume</p>
         </a>
       </div>
-      <div class="skillcarosel" style="overflow-x: hidden;">
+      <div class="skillcarosel">
         <h2 class="skill-text">Skills</h2>
         <div class="skillWrapper">
           <div class="skillLoop">
@@ -80,7 +74,6 @@
               <img class="skillImg" src="assets\Ruby_On_Rails_Logo.svg.png" />
               <img class="skillImg" src="assets\React-icon.svg.png" />
               <img class="skillImg" src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" />
-
               <img class="skillImg" src="assets\512px-HTML5_logo_and_wordmark.svg.png" />
               <img class="skillImg" src="assets\120px-CSS3_logo_and_wordmark.svg.png" />
               <img class="skillImg" src="assets\kisspng-javascript-computer-icons-scalable-vector-graphics-list-of-javascript-enhancements-fandom-developers-5d145895da3992.0726245815616144858939.png" />
@@ -93,24 +86,19 @@
       </div>
     </div>
       
+    
+    <div class="projects">
+      
       <div class="project-text">
         <h2>Projects</h2>
       </div>
-      
-      <div class="projects">
         <div class="morningT">
-          <img class="morningTpreview" src="assets\morningTSnapShot.png"/>
+          <img class="morningTPreview" src="assets\morningTSnapShot.png"/>
           <h3>The Morning T</h3>
           <div class="morningTOverlay">
-            <a
-                href="https://themorningt.herokuapp.com/"
-                target="_blank"
-                style="text-decoration: none;color: #ffff"
-              >
-            <div class="morningTTitle" ></div>
             <span id="morningTText" class="morningTText">
-              <p>
-                Description: <br />
+              <p> 
+                 <br />
                 A web application that allows users to see where all the Trains
                 stop in Boston. <br />
                 <br />
@@ -127,12 +115,33 @@
             </span>
           </div>
         </div>
-        </div>  
+        <div class="simpleToDo">
+          <img class="toDoPreview" src="assets\toDoSn.png"/>
+            <h3>Task Tracker</h3>
+          <div class="toDoOverlay">    
+            <span id="toDoText" class="toDoText">
+              <p>
+                <br />
+                A simple task tracker application<br />
+                <br />
+                Technologies used: <br />
+                Javascript, HTML, Css             
+              </p>
+              <a
+                href="https://ericfrancis313.github.io/simpleTodo/"
+                target="_blank"
+                style="text-decoration: none; color: var(--bg-color)"
+              >
+                <strong> Click to View </strong>
+              </a>
+            </span>
+          </div>
+        </div>
 
         
       </div>
     
-      <div class="contacts">
+      <footer class="contacts">
         <a
           class="contact"
           href="https://open.spotify.com/artist/1ebkk9iJr0dn6QUwDngd9x?si=Xii9MA9_S9-vBJV8W2DJ6g"
@@ -171,7 +180,7 @@
         </a>
       </div>
 
+    </footer>
       <script src=".\index.js"></script>
       <script src="https://kit.fontawesome.com/3d7bda5068.js" crossorigin="anonymous"></script>
-    </body>
 </html>

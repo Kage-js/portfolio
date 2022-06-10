@@ -16,15 +16,12 @@ body{
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .5fr .5fr .5fr .5fr .10fr;
     grid-template-areas: 
     "hero hero hero"
-    ". . ."
-    ". resume ."
     ". aboutMe ."
-    ". skillTxt ."
+    ". resume ."
     ". skills . "
-    ". project-text ."
     ". projects ."
     ". contacts . "
     ;
@@ -36,7 +33,7 @@ body{
     grid-area: hero;
     text-align: center;
     justify-content: center;
-    padding-top: 25em;
+    padding-top: 500px;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms ease forwards;
@@ -45,7 +42,6 @@ body{
 
 .aboutMe{  
     grid-area: aboutMe;
-    padding-top: 100px;
     text-align: center;
     justify-content: center;
     justify-content: space-between;
@@ -63,21 +59,27 @@ body{
 
 .aboutText{
     text-align: center;
+    
 }
 
 .fullStackDev{
     padding-left: 50px;
     padding-right: 50px;
     transition: all .2s ease-in-out;
+    
 }
 
  .fullStackDev:hover{
     transform: scale(1.5);
-   padding-bottom: 150px;
-    padding-right: 150px;
+    padding-bottom: 150px;
+  
+    
+
 }
 
 .musicProducer{
+    
+    border-radius: 1px;
     padding-left: 50px;
     padding-right: 50px;
   
@@ -85,9 +87,8 @@ body{
 }
 .musicProducer:hover{
     transform: scale(1.5);
-    padding-left: 150px;
-    padding-right: 150px;
     padding-bottom: 150px;
+   
     
 }
 
@@ -98,7 +99,7 @@ body{
 }
 .somethingElse:hover{
     transform: scale(1.5);
-    padding-left: 150px;
+    
     padding-bottom: 150px;
    
 }
@@ -110,6 +111,7 @@ body{
     text-decoration: none;
     color: hsl(49 37% 94%);
     text-align: center;
+   
     font-size: 2rem;
     font-weight: 400;
     
@@ -157,7 +159,7 @@ body{
 }
 .skillcarosel{
     grid-area:skills;
-    padding-top: 500px;
+    
 
 }
 
@@ -199,8 +201,9 @@ body{
 }
 
 .projects{
+    display: absolute;
      height: 100vh;
-      cursor: default;
+    cursor: default;
     grid-area: projects;    
     align-items: center;
     justify-content: center;
@@ -213,6 +216,7 @@ body{
 }
 
 .project{ 
+    
     /*making it fade in*/
      cursor: default;
     opacity: 0;
@@ -222,27 +226,44 @@ body{
     text-shadow: 0 0 0.05em currentColor;   
 }
 
-.project.morningT{  
+.project{  
+    
     cursor: default;
   position: relative; 
   width:10%;
 }
 
-
-.morningTpreview{
-
+.toDoPreview{
+    display: relative;
     display: block;
     margin: 0 auto;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom:0;
   display:block;
   width:250px;
   height: 250px; 
 }
 
-.morningT.morningTOverlay{
+
+.morningTPreview{ 
+    margin: 0 auto;
+    top:1;
+    left: 0;
+    right:0;
+    bottom:0;
+  display:block;
+  width:250px;
+  height: 250px; 
+}
+
+
+.toDoOverlay{
     justify-content: center;
     align-self: center;
     align-items: center;
-    text-align: center;
+    text-align: center; 
 }
 
 .morningTOverlay{
@@ -250,7 +271,7 @@ body{
     position: absolute;
     display: block;
     margin: 0 auto;
-    top: 0;
+    top: 67px;
     left: 0;
     right:0;
     bottom:0;
@@ -267,11 +288,41 @@ body{
     transition: opacity 0.25s;
 }
 
+.toDoOverlay{
+    display: block;
+    position: absolute;
+    margin: 0 auto;
+    top:378px;
+    left: 0;
+    right:0;
+    bottom:auto;
+    width: 250px;
+    height: 250px;
+    background: rgb(0,0,0,0.6);
+    color: #ffff;
+    font-family:"Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
 .morningTOverlay:hover{
     opacity: 1;
 }
 
+.toDoOverlay:hover{
+    opacity: 1;
+}
+
 .morningTTitle{
+    font-size: 2em;
+    font-weight: bold;   
+}
+
+.toDoTitle{
     font-size: 2em;
     font-weight: bold;   
 }
@@ -281,19 +332,31 @@ body{
     margin-top: 0.25em;
 }
 
+.toDoDescription{
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
 .morningTOverlay >*{
     transform:translateY(20px);
     transition: transform 0.25s;
 }
 
-.morningTOverlay:hover > *{
-    transform: translateY(0px) ;
+.toDoOverlay >*{
+    transform:translateY(20px);
+    transition: transform 0.25s;
 }
+
 
 .morningT{
      cursor: default;
- text-align: center;
+     text-align: center;
  
+}
+
+.simpleToDo{
+    cursor: default;
+    text-align: center;
 }
 
 .center-pic{
@@ -321,14 +384,18 @@ body{
 .contacts{
     grid-area: contacts;
     text-align: center;
-    padding-top: 20em;
-    grid-column: 2/3;
+
     opacity: 0;
-    cursor: pointer;
+    cursor: pointer; 
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
     transform: translateY(3rem);
     animation: fadeInUp 800ms 1.1s ease forwards;
-    text-shadow: 0 0 0.05em currentColor;
-    align-self: center;
+    
+
 }
 
 .contact{
@@ -336,10 +403,38 @@ body{
     padding: 2.5%;
 }
 
-.projectText {
-    color: var(--bg-color);
+.morningTText {
     text-decoration: none;
-    display: none;
+    color: #ffff;
+    font-family:"Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s;
+    
+}
+.toDoText {
+    text-decoration: none;
+    color: #ffff;
+    font-family:"Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s;
+    
+}
+
+.morningTText{
+      text-decoration: none;
+    color: #ffff;
+    font-family:"Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s;
 }
 
 
