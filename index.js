@@ -7,7 +7,7 @@ window.onscroll = function() {
  var opac = (window.pageYOffset / background);
     console.log(opac);
      
-  document.body.style.background =  "linear-gradient(rgba(0, 0, 0, " + opac*.2 + "), rgba(0, 0, 0, " + opac*.2 + ")), url('assets/BostonBackground.jpeg') no-repeat";
+  document.body.style.background =  "linear-gradient(rgba(0, 0, 0, " + opac*1.5 + "), rgba(0, 0, 0, " + opac*1.5 + ")), url('assets/BostonBackground.jpeg') no-repeat";
   document.body.style.backgroundPosition="center"; 
   document.body.style.backgroundAttachment='fixed';
   document.body.style.backgroundSize= "cover";
