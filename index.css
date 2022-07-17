@@ -76,12 +76,10 @@ a:visited{
     color: #FFFFFF;
     text-align: center;
     
-    
 }
 
 .fullStackDev{
     grid-area:fullStackDev;
-    font-size: x-large;
     text-align: center;
     justify-content: center;
     justify-content: space-between;
@@ -89,7 +87,9 @@ a:visited{
     transition: all .2s ease-in-out;
     
 }
-f
+.fullStackAboutMe{
+    font-size: x-large;
+}
 
 .musicProducer{
     
@@ -189,7 +189,7 @@ f
     justify-items: center;
     position: absolute;
     display: flex;
-    animation: scroll 5s linear infinite;
+    animation: scroll 10s linear infinite;
     transform: translate(0, -50%);
     top: 50%;
     
@@ -275,20 +275,12 @@ f
   height: 250px; 
 }
 
-
-.toDoOverlay{
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    text-align: center; 
-}
-
 .morningTOverlay{
     
     position: absolute;
     display: block;
     margin: 0 auto;
-    top: 57px;
+    top: 48px;
     left: 0;
     right:0;
     bottom:0;
@@ -306,10 +298,14 @@ f
 }
 
 .toDoOverlay{
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    text-align: center; 
     display: block;
     position: absolute;
     margin: 0 auto;
-    top:379px;
+    top:357px;
     left: 0;
     right:0;
     bottom:auto;
