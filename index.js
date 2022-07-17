@@ -31,16 +31,12 @@ function openMorningT(){
         document.body.style.background="cover"
         project.style.alignSelf = "center"
         project.style.backgroundColor = "#ffff"
-        project.style.color ="var(--bg-color)"
-        
-         
+        project.style.color ="var(--bg-color)"     
     }else{
         text.style.display ="none" 
         project.style.textDecoration="none"
         project.style.backgroundColor="var(--bg-color)"
-        project.style.color="hsl(49 37% 94%)"
-        
-        
+        project.style.color="hsl(49 37% 94%)"  
     }
 }
 
@@ -115,7 +111,3 @@ function openChatBot(){
     }
 }
 
-function musicProducerHover(){
-        
-
-}

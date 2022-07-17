@@ -2,6 +2,10 @@
      --bg-color: #080708;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     scroll-snap-type: y mandatory;
     max-width: 100%;
@@ -16,13 +20,11 @@ body{
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 1fr .5fr .5fr .5fr .5fr .10fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr .5fr .10fr;
     grid-template-areas: 
     "hero hero hero"
-    ". aboutMe ."
-    ". resume ."
-    ". skills . "
-    ". projects ."
+    ". fullStackDev ."
+    ". aboutMe ." 
     ". contacts . "
     ;
     color: #E6E8E6;   
@@ -30,14 +32,19 @@ body{
 }
 
 .hero{
+    height: 100vh;
     grid-area: hero;
-    text-align: center;
-    justify-content: center;
-    padding-top: 400px;
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 800ms ease forwards;
     
+}
+
+.heroText{
+    padding-top: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutMe{  
@@ -46,6 +53,10 @@ body{
     justify-content: center;
     justify-content: space-between;
     
+}
+
+a:visited{
+    color: #E6E8E6;
 }
 
 .discription{   
@@ -58,24 +69,23 @@ body{
 }
 
 .aboutText{
+    color: #FFFFFF;
     text-align: center;
+    
     
 }
 
 .fullStackDev{
-    padding-left: 50px;
-    padding-right: 50px;
+    grid-area:fullStackDev;
+    font-size: x-large;
+    text-align: center;
+    justify-content: center;
+    justify-content: space-between;
+    
     transition: all .2s ease-in-out;
     
 }
-
- .aboutMe .fullStackDev:hover{
-    transform: scale(1.5);
-    padding-bottom: 150px;
-  
-    
-
-}
+f
 
 .musicProducer{
     
@@ -113,6 +123,7 @@ body{
     color: hsl(49 37% 94%);
     text-align: center;
     padding-top:150px ;
+    padding-bottom: 130px;
     font-size: 2rem;
     font-weight: 400;
     
@@ -139,13 +150,14 @@ body{
 
 .skill-text{
     grid-area: skillTxt;
+    padding-top: 50px;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 .skillImg{
-    height: 200px;
+    height: 150px;
     width: 100%;
     display: flex;
 }
@@ -173,7 +185,7 @@ body{
     justify-items: center;
     position: absolute;
     display: flex;
-    animation: scroll 10s linear infinite;
+    animation: scroll 5s linear infinite;
     transform: translate(0, -50%);
     top: 50%;
     
@@ -250,7 +262,7 @@ body{
 
 .morningTPreview{ 
     margin: 0 auto;
-    top:1;
+    top:0;
     left: 0;
     right:0;
     bottom:0;
@@ -272,7 +284,7 @@ body{
     position: absolute;
     display: block;
     margin: 0 auto;
-    top: 67px;
+    top: 57px;
     left: 0;
     right:0;
     bottom:0;
@@ -293,7 +305,7 @@ body{
     display: block;
     position: absolute;
     margin: 0 auto;
-    top:376px;
+    top:379px;
     left: 0;
     right:0;
     bottom:auto;
@@ -428,7 +440,7 @@ body{
 }
 
 .morningTText{
-      text-decoration: none;
+    text-decoration: none;
     color: #ffff;
     font-family:"Quicksand", sans-serif;
     display: flex;
@@ -450,6 +462,6 @@ body{
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1770px);
+    transform: translateX(-1450px);
   }
 }
