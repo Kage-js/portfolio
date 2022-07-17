@@ -194,6 +194,29 @@ a:visited{
     top: 50%;
     
 }
+@media screen and (max-width: 414px){
+    .skillWrapper{
+        display:none
+    }
+    .skills{
+       display: none;   
+    }
+
+    .skill-text{
+        display: none;
+    }
+    .skillImg{
+        display: none;
+    }
+    .skillLoop {
+        display:none
+    }
+    .skillcarosel{
+        display: none;
+        
+    }
+}   
+
 .skills:nth-child(1) {
     float:left;
     top: 0;
@@ -417,6 +440,7 @@ a:visited{
 }
 
 .morningTText {
+  
     text-decoration: none;
     color: #ffff;
     font-family:"Quicksand", sans-serif;
