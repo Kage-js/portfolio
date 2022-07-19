@@ -10,15 +10,13 @@
       <link rel="stylesheet" href="index.css" />
       <div class="hero"> 
         <div class="heroText">
-
           <h1 class="head-text">Eric Francis</h1>
           <div class="discription">
             <h4 class="aboutText">
-              <a  style="text-decoration: none;" href="#fullStackDev" > Full Stack Developer,</a>  Music Producer, ...Something else</h4>
-          </div> 
-        </div>
+              <a  style="text-decoration: none;" href="#fullStackDev" > Full Stack Developer,</a> <a style="text-decoration: none;" href="#musicProducer"> Music Producer,</a> <a style="text-decoration: none;" href="#somethingElse">...Something else</a></h4>
+            </div> 
+          </div>
       </div>
-
       <div id="fullStackDev" class="fullStackDev">
         <div class="fullStackAboutMe">
           <i class="fa-solid fa-keyboard"></i>
@@ -65,20 +63,17 @@
         </div>
       </div>
     </div>
-      
-    
+       
     <div class="projects">
-      
       <div class="project-text">
         <h2>Projects</h2>
       </div>
         <div class="morningT">
-          <img class="morningTPreview" src="assets\morningTSnapShot.png"/>
           <h3>The Morning T</h3>
+          <img class="morningTPreview" src="assets\morningTSnapShot.png"/>
           <div class="morningTOverlay">
             <span id="morningTText" class="morningTText">
-              <p> 
-               
+              <p>        
                 A web application that allows users to see where all the Trains
                 stop in Boston. <br />
                 <br/>
@@ -96,8 +91,8 @@
           </div>
         </div>
         <div class="simpleToDo">
+          <h3>Task Tracker</h3>
           <img class="toDoPreview" src="assets\toDoSn.png"/>
-            <h3>Task Tracker</h3>
           <div class="toDoOverlay">    
             <span id="toDoText" class="toDoText">
               <p>
@@ -119,31 +114,49 @@
         </div>
       </div>
       </div>
-      
-      <div class="aboutMe">
-        <div class="musicProducer" onmouseover="musicProducerHover()">
-          <i class="fa-solid fa-music"></i>
+    </div>
+    <div id="musicProducer" class="musicProducer">
+      <div class="musicProducerText" >
+        <i class="fa-solid fa-music"></i>
           <h4>Music Producer</h4>
-         <h5>
+          <h5>
             Making music has been an outlet for me since the 6th grade.
             My experince with music production has given me the ability to work freelance
             making music and sounds for other content creators. Being a freelance producer has taught me
             to be <b>time efficient</b> to bring clients <b>quality</b> products in a timeley manner, and <b>self sufficient</b>
             when problems arised.  
           </h5>
-        </div>
-        
-        <div class="somethingElse">
-          <i class="fa-regular fa-star"></i>
-          <h4>Something Else</h4>
-          <h5>
-            Being <b>self motivated</b> and <b>eager to learn</b> helps fuel curiosity and 
-            overactive imagination. I tend to find myself learning new skills so that I can create 
-            and finding new things to create.
-          </h5>
-        </div>
-      </div>
-      <footer class="contacts">
+          <div class="spotifyPlayer">
+
+            <iframe style="border-radius:12px; padding-top:50px;" src="https://open.spotify.com/embed/artist/6ksEKW9qV3W5aqHvZJDPfx?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </div>
+          </div>  
+        </div>    
+        <div class="somethingElse" id="somethingElse">
+          <div class="somethingElseText">
+            <i class="fa-regular fa-star"></i>
+            <h4>Something Else</h4>
+            <h5>
+              Being <b>self motivated</b> and <b>eager to learn</b> helps fuel curiosity and 
+              overactive imagination. I tend to find myself learning new skills so that I can create 
+              and finding new things to create.
+            </h5>
+          </div>
+          <!-- Add a placeholder for the Twitch embed -->
+        <div id="twitch-embed"></div>
+
+        <!-- Load the Twitch embed script -->
+        <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+        <script type="text/javascript">
+          new Twitch.Player("twitch-embed", {
+            channel: "code__kage",
+            height: "480px",
+            width: "840px",
+          });
+        </script>
+      <div class="contacts">
         <a
           class="contact"
           href="https://open.spotify.com/artist/1ebkk9iJr0dn6QUwDngd9x?si=Xii9MA9_S9-vBJV8W2DJ6g"
@@ -180,9 +193,7 @@
           href="https://github.com/ericfrancis313" style: height = "40" width =
           "40" padding="3" style= "text-decoration: none;">
         </a>
-      </div>
-
-    </footer>
-      <script src=".\index.js"></script>
-      <script src="https://kit.fontawesome.com/3d7bda5068.js" crossorigin="anonymous"></script>
+      </div>  
+  <script src=".\index.js"></script>
+  <script src="https://kit.fontawesome.com/3d7bda5068.js" crossorigin="anonymous"></script>
 </html>
