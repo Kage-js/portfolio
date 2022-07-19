@@ -147,6 +147,7 @@ a:visited{
 #twitch-embed{
     height: 480px;
     width: 840px;
+    display: initial;
 }
 
 .resume{
@@ -331,7 +332,7 @@ nav{
     position: absolute;
     display: block;
     margin: 0 auto;
-    top: 48px;
+    top: 89px;
     left: 0;
     right:0;
     bottom:0;
@@ -356,7 +357,7 @@ nav{
     display: block;
     position: absolute;
     margin: 0 auto;
-    top:357px;
+    top:398px;
     left: 0;
     right:0;
     bottom:auto;
@@ -447,6 +448,7 @@ nav{
 
 .twitchPlayer{
     grid-area: twitchPlayer;
+        display: inline-table;
     
 }
 
