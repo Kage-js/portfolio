@@ -65,6 +65,13 @@ body{
     .somethingElse{
         padding-top:250px;
     }
+     
+    .heroText {
+     padding-top: 350px;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+}
 
 } 
     
