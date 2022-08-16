@@ -2,13 +2,13 @@
      --bg-color: #080708;
 }
 
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
     scroll-snap-type: y mandatory;
-    
     width: 100vw;
     color: #E6E8E6;   
     font-family: 'Roboto Mono', monospace;
@@ -32,17 +32,40 @@ body{
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 912px) {
     html, body {
-  overflow-x: hidden;
-}
+        overflow-x: hidden;
+    }
     body {
         width: 100vw;
         display: grid;
         position: absolute;
-        
-       
+         display: block;  
     }
+    .skillWrapper{
+        display:none
+    }
+    .skills{
+       display: none;   
+    }
+
+    .skill-text{
+        display: none;
+    }
+    .skillImg{
+        display: none;
+    }
+    .skillLoop {
+        display:none
+    }
+    .skillcarosel{
+        display: none;
+    }
+
+    .somethingElse{
+        padding-top:250px;
+    }
+
 } 
     
 
